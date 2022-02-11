@@ -1453,6 +1453,101 @@
 		// Initialize.
 			scrollEvents.init();
 	
+	// Deferred.
+		(function() {
+	
+			var items = $$('.deferred'),
+				loadHandler, enterHandler;
+	
+			// Polyfill: NodeList.forEach()
+				if (!('forEach' in NodeList.prototype))
+					NodeList.prototype.forEach = Array.prototype.forEach;
+	
+			// Handlers.
+				loadHandler = function() {
+	
+					var i = this,
+						p = this.parentElement;
+	
+					// Not "done" yet? Bail.
+						if (i.dataset.src !== 'done')
+							return;
+	
+					// Show image.
+						if (Date.now() - i._startLoad < 375) {
+	
+							p.classList.remove('loading');
+							p.style.backgroundImage = 'none';
+							i.style.transition = '';
+							i.style.opacity = 1;
+	
+						}
+						else {
+	
+							p.classList.remove('loading');
+							i.style.opacity = 1;
+	
+							setTimeout(function() {
+								i.style.backgroundImage = 'none';
+								i.style.transition = '';
+							}, 375);
+	
+						}
+	
+				};
+	
+				enterHandler = function() {
+	
+					var	i = this,
+						p = this.parentElement,
+						src;
+	
+					// Get src, mark as "done".
+						src = i.dataset.src;
+						i.dataset.src = 'done';
+	
+					// Mark parent as loading.
+						p.classList.add('loading');
+	
+					// Swap placeholder for real image src.
+						i._startLoad = Date.now();
+						i.src = src;
+	
+				};
+	
+			// Initialize items.
+				items.forEach(function(p) {
+	
+					var i = p.firstElementChild;
+	
+					// Set parent to placeholder.
+						if (!p.classList.contains('enclosed')) {
+	
+							p.style.backgroundImage = 'url(' + i.src + ')';
+							p.style.backgroundSize = '100% 100%';
+							p.style.backgroundPosition = 'top left';
+							p.style.backgroundRepeat = 'no-repeat';
+	
+						}
+	
+					// Hide image.
+						i.style.opacity = 0;
+						i.style.transition = 'opacity 0.375s ease-in-out';
+	
+					// Load event.
+						i.addEventListener('load', loadHandler);
+	
+					// Add to scroll events.
+						scrollEvents.add({
+							element: i,
+							enter: enterHandler,
+							offset: 250
+						});
+	
+				});
+	
+		})();
+	
 	// "On Visible" animation.
 		var onvisible = {
 	
