@@ -3398,6 +3398,8 @@ form .actions button:disabled {
 
 #buttons02 .n01 svg {
 	fill: #FFFFFF;
+	width: .75rem;
+	height: .75rem;
 }
 
 #buttons02 .n01:hover {
@@ -3406,6 +3408,8 @@ form .actions button:disabled {
 
 #buttons02 .n02 svg {
 	fill: #000000;
+	width: .75rem;
+	height: .75rem;
 }
 
 #buttons02 .n02 {
