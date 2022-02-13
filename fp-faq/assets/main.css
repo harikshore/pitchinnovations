@@ -392,13 +392,13 @@ body.is-instant:after {
 }
 
 #container01 > .wrapper > .inner > :nth-child(2) {
-	width: 50%;
+	width: 20%;
 	--alignment: left;
 	--flex-alignment: flex-start;
 }
 
 #container01 > .wrapper > .inner > :nth-child(3) {
-	width: 30%;
+	width: 60%;
 	--alignment: right;
 	--flex-alignment: flex-end;
 }
@@ -1739,19 +1739,19 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 50%;
+		width: 20%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 30%;
+		width: 60%;
 		--alignment: right;
 		--flex-alignment: flex-end;
 	}
 	
 	#container05:not(:first-child) {
-		margin-top: 5rem !important;
+		margin-top: 3rem !important;
 	}
 	
 	#container05 {
@@ -2175,11 +2175,11 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 50%;
+		width: 20%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 30%;
+		width: 60%;
 	}
 	
 	#container05 {

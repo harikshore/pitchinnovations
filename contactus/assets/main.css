@@ -392,13 +392,13 @@ body.is-instant:after {
 }
 
 #container01 > .wrapper > .inner > :nth-child(2) {
-	width: 50%;
+	width: 20%;
 	--alignment: left;
 	--flex-alignment: flex-start;
 }
 
 #container01 > .wrapper > .inner > :nth-child(3) {
-	width: 30%;
+	width: 60%;
 	--alignment: right;
 	--flex-alignment: flex-end;
 }
@@ -1821,7 +1821,7 @@ form.style1 .file[data-filename=""]:before {
 }
 
 #buttons01 .n02 {
-	background-color: #D4D4D4;
+	background-color: rgba(255,255,255,0.941);
 	color: #000000;
 }
 
@@ -1955,13 +1955,13 @@ form.style1 .file[data-filename=""]:before {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 50%;
+		width: 20%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 30%;
+		width: 60%;
 		--alignment: right;
 		--flex-alignment: flex-end;
 	}
@@ -2419,11 +2419,11 @@ form.style1 .file[data-filename=""]:before {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 50%;
+		width: 20%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 30%;
+		width: 60%;
 	}
 	
 	#container05 {
