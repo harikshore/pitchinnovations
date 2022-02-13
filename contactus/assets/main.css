@@ -1806,6 +1806,8 @@ form.style1 .file[data-filename=""]:before {
 
 #buttons01 .n01 svg {
 	fill: #FFFFFF;
+	width: .75em;
+	height: .75em;
 }
 
 #buttons01 .n01 {

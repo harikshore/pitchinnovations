@@ -1590,6 +1590,8 @@ form .actions button:disabled {
 
 #buttons01 .n01 svg {
 	fill: #FFFFFF;
+	width: .75em;
+	height: .75em;
 }
 
 #buttons01 .n01 {
