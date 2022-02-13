@@ -3,6 +3,7 @@
     margin: 24px 0;
     line-height: 1.5;
     font-size: .75em;
+    font-family: "Inter";
 }
 
 
@@ -65,4 +66,5 @@
     letter-spacing: .05em;
     cursor: pointer;
     box-align: center;
+    font-family: "Inter";
 }
