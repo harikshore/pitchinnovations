@@ -299,6 +299,7 @@ body.is-instant:after {
 
 #container01.columns > .wrapper > .inner > *:first-child {
 	margin-left: 0rem;
+	width: 13%;
 }
 
 #container01.default > .wrapper > .inner > .full {
@@ -380,7 +381,7 @@ body.is-instant:after {
 }
 
 #container01 > .wrapper > .inner > :nth-child(2) {
-	width: 20%;
+	width: 27%;
 	--alignment: left;
 	--flex-alignment: flex-start;
 }
@@ -3687,6 +3688,7 @@ form .actions button:disabled {
 	
 	#container01.columns > .wrapper > .inner > *:first-child {
 		margin-left: 0rem;
+		width: 13%;
 	}
 	
 	#container01.columns > .wrapper > .inner > div > .full {
@@ -3718,7 +3720,7 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 20%;
+		width: 27%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
@@ -4816,6 +4818,7 @@ form .actions button:disabled {
 	
 	#container01.columns > .wrapper > .inner > *:first-child {
 		margin-left: -0rem;
+		width: 13%;
 	}
 	
 	#container01.columns > .wrapper > .inner > div > .full {
@@ -4845,7 +4848,7 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 20%;
+		width: 27%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
