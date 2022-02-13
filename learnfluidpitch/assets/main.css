@@ -2129,7 +2129,7 @@ form .actions button:disabled {
 }
 
 #buttons01 .n02 {
-	background-color: #D4D4D4;
+	background-color: rgba(255,255,255,0.941);
 	color: #000000;
 }
 
