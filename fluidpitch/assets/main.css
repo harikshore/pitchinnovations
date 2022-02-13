@@ -4675,7 +4675,6 @@ th {
 	
 	#container01.columns > .wrapper > .inner > *:first-child {
 		margin-left: 0rem;
-		width: 13%;
 	}
 	
 	#container01.columns > .wrapper > .inner > div > .full {
@@ -4707,7 +4706,7 @@ th {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 27%;
+		width: 20%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
@@ -6095,7 +6094,6 @@ th {
 	
 	#container01.columns > .wrapper > .inner > *:first-child {
 		margin-left: -0rem;
-		width: 13%;
 	}
 	
 	#container01.columns > .wrapper > .inner > div > .full {
@@ -6125,7 +6123,7 @@ th {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 27%;
+		width: 20%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
