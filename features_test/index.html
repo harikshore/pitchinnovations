@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>carousel</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<meta name="description" content="carousel" />
+	<meta property="og:site_name" content="carousel" />
+	<meta property="og:title" content="carousel" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="carousel" />
+	<link rel="stylesheet" href="assets/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="main">
+			<div class="inner">
+				<div id="container05" class="container columns full screen">
+					<div class="wrapper">
+
+						<style>
+							.feature {
+								opacity: 0.1;
+								transform: scale(.75);
+								transition: transform 0.2s;
+
+							}
+
+							.feature .feat-desc {
+								visibility: hidden;
+
+							}
+
+							.feature .feat-desc {
+								visibility: visible;
+
+							}
+
+							.feature.active {
+								opacity: 1;
+								transform: scale(1);
+							}
+
+							/*
+							.circle {
+
+								border-radius: 50%;
+								position: relative;
+							}
+
+							.feat-num {
+								background: #E19F51;
+								border-radius: 50%;
+								width: 100%;
+								height: 100%;
+							}*/
+						</style>
+
+						<div class="inner" id="features-nav">
+
+
+							<div class="feature active">
+								<p class="feat-num" id="text08">01</p>
+								<a href="#" class="feat-one" style="text-decoration:none;">
+									<p id="text02">Bend from a single note to a whole
+										chord</p>
+								</a>
+								<p class="feat-desc" id="text10">Create harmonies that have never been heard before by
+									bending from a
+									single note to a whole chord</p>
+							</div>
+
+
+							<div class="feature">
+								<p class="feat-num" id="text11">02</p>
+								<a href="#" class="feat-two" style="text-decoration:none;">
+									<p id="text12">Bend from any chord to any chord</p>
+								</a>
+								<p class="feat-desc" id="text13">With our MPE upscale technology, you can now bend from
+									the simplest triad to the most complex voicings</p>
+							</div>
+
+
+							<div class="feature">
+								<p class="feat-num" id="text07">03</p>
+								<a href="#" class="feat-three" style="text-decoration:none;">
+									<p id="text09">Create Unique Pitch FX</p>
+								</a>
+								<p class="feat-desc" id="text06">Fluid Chords is a sound designer’s playground - You can
+									now create unique pitch FX like chord risers and more</p>
+							</div>
+
+
+							<script>
+								// Add active class to the current button (highlight it)
+								var header = document.getElementById("features-nav");
+								var btns = header.getElementsByClassName("feature");
+								for (var i = 0; i < btns.length; i++) {
+									btns[i].addEventListener("click", function () {
+										var current = document.getElementsByClassName("active");
+										current[0].className = current[0].className.replace(" active", "");
+										this.className += " active";
+									});
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+				<div id="container06" class="container default full screen">
+					<div class="wrapper">
+						<div class="inner">
+							<div id="embed06">
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+									integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+									crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+								<script
+									src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+									integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+									crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+								<style>
+									.container {
+										margin-top: 80px;
+									}
+
+									.owl-carousel .owl-nav {
+										overflow: hidden;
+										height: 0px;
+									}
+
+									.owl-carousel .nav-button {
+										height: 50px;
+										width: 50px;
+										cursor: pointer;
+										position: absolute;
+										/* vertical-align: center; */
+									}
+
+									.owl-carousel .owl-prev.disabled,
+									.owl-carousel .owl-next.disabled {
+										pointer-events: none;
+										opacity: 0.25;
+									}
+
+									.owl-carousel .owl-prev {
+										left: -5px;
+										padding-left: 25em;
+									}
+
+									.owl-carousel .owl-next {
+										right: -5px;
+										padding-right: 25em;
+									}
+
+									.owl-theme .owl-nav [class*=owl-] {
+										color: #ffffff;
+										font-size: 2.5em;
+										fill: white;
+										font-family: 'Alef';
+										font-weight: lighter;
+										background: transparent;
+										border-radius: 3px;
+									}
+
+									.owl-theme .owl-nav:hover [class*=owl-] {
+
+										background-color: transparent;
+									}
+
+									.owl-carousel {
+										top: 15px;
+									}
+
+									.owl-carousel .item {
+										margin: 25px;
+										padding-left: 1em;
+									}
+
+									.owl-dots {
+										text-align: center;
+										margin-top: 10px;
+									}
+
+									.owl-dot {
+										display: flex;
+									}
+
+									.owl-theme .owl-dots .owl-dot span {
+										border: 1px solid #000000;
+										background: #ffffff;
+										border-radius: 50%;
+										display: block;
+									}
+
+									.owl-theme .owl-dots .owl-dot.active span,
+									.owl-theme .owl-dots .owl-dot:hover span {
+										background: #000000;
+									}
+
+									/*
+									.owl-item {
+									margin: 0em 2em 0em 2em;
+									}
+									*/
+
+									.video-container {
+										position: relative;
+										padding-top: 56.25%;
+										/* padding-top: 30px; */
+										height: 0;
+										overflow: hidden;
+										box-shadow: 0 0 15px #900B81;
+									}
+
+									.video-container iframe,
+									.video-container object,
+									.video-container embed {
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+									}
+
+									.belowtext {
+										color: #000000;
+										font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+										margin-top: 1em;
+										line-height: 1.5;
+										font-size: 1.25em;
+										text-align: left;
+									}
+
+									.belowtext-2 {
+										color: #9B9C9C;
+										font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+										margin-top: 1em;
+										line-height: 1.5;
+										font-size: .875em;
+										text-align: left;
+
+									}
+
+									.belowtext-3 {
+
+										color: #000000;
+										font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+										margin-top: 1em;
+										line-height: 1.5;
+										font-size: 1em;
+										text-align: left;
+									}
+								</style>
+
+								<div class="owl-carousel owl-theme video-slider-1">
+									<video playsinline="" muted="" autoplay="" loop="" style="width:75%;">
+										<source src="assets/videos/feature1.mp4" type="video/mp4">
+									</video>
+
+									<video playsinline="" muted="" autoplay="" loop="" style="width:75%;">
+										<source src="assets/videos/feature2.mp4" type="video/mp4">
+
+									</video>
+
+									<video playsinline="" muted="" autoplay="" loop="" style="width:75%;">
+										<source src="assets/videos/feature3.mp4" type="video/mp4">
+
+									</video>
+								</div>
+
+								<script type="text/javascript">
+
+									//owlCarousel slider
+									var owl = $(".video-slider-1").owlCarousel({
+										items: 1,
+										loop: true,
+										margin: 10,
+										singleItem: true,
+										animateIn: 'fadeIn',
+										animateOut: 'fadeOut',
+										//autoplayHoverPause: true,
+										lazyLoad: true,
+										dots: false,
+										mouseDrag: false,
+										touchDrag: false,
+										pullDrag: false,
+										freeDrag: false,
+										onTranslate: function () {
+											$('.owl-item').find('video').each(function () {
+												this.play();
+											});
+										}
+									});
+
+									// Play slider when video pause
+									function playSlider() {
+										window.owl.trigger('play.owl.autoplay')
+									}
+
+									// Pause slider when video play
+									function pauseSlider() {
+										window.owl.trigger('stop.owl.autoplay')
+									}
+
+									// Jump to slide on click
+									$('.feat-one').click(function () {
+										$('.owl-carousel').trigger('to.owl.carousel', 0)
+									});
+
+									// Jump to slide on click
+									$('.feat-two').click(function () {
+										$('.owl-carousel').trigger('to.owl.carousel', 1)
+									});
+
+									// Jump to slide on click
+									$('.feat-three').click(function () {
+										$('.owl-carousel').trigger('to.owl.carousel', 2)
+									});
+
+								</script>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="assets/main.js"></script>
+</body>
+
+</html>
