@@ -9,10 +9,13 @@ var playPause4 = document.querySelector("#playPause4");
 var wavesurfer = WaveSurfer.create({
     container: "#wave-1",
     responsive: true,
-    waveColor: "orange",
-    progressColor: "#FF8C00",
+    waveColor: "#39AAB2",
+    progressColor: "#141414",
+    normalize: true,
     height: 50,
     scrollParent: false,
+    autoCenter: true,
+    cursorWidth: 0,
     fillParent: true,
     hideScrollbar: true
 });
@@ -20,10 +23,13 @@ var wavesurfer = WaveSurfer.create({
 var wavesurfer2 = WaveSurfer.create({
     container: "#wave-2",
     responsive: true,
-    waveColor: "orange",
-    progressColor: "#FF8C00",
+    waveColor: "#39AAB2",
+    progressColor: "#141414",
+    normalize: true,
     height: 50,
     scrollParent: false,
+    cursorWidth: 0,
+    autoCenter: true,
     fillParent: true,
     hideScrollbar: true
 });
@@ -31,10 +37,13 @@ var wavesurfer2 = WaveSurfer.create({
 var wavesurfer3 = WaveSurfer.create({
     container: "#wave-3",
     responsive: true,
-    waveColor: "orange",
-    progressColor: "#FF8C00",
+    waveColor: "violet",
+    progressColor: "#141414",
+    normalize: true,
     height: 50,
     scrollParent: false,
+    cursorWidth: 0,
+    autoCenter: true,
     fillParent: true,
     hideScrollbar: true
 });
@@ -42,10 +51,13 @@ var wavesurfer3 = WaveSurfer.create({
 var wavesurfer4 = WaveSurfer.create({
     container: "#wave-4",
     responsive: true,
-    waveColor: "orange",
-    progressColor: "#FF8C00",
+    waveColor: "violet",
+    progressColor: "#141414",
+    cursorWidth: 0,
+    normalize: true,
     height: 50,
     scrollParent: false,
+    autoCenter: true,
     fillParent: true,
     hideScrollbar: true
 });
