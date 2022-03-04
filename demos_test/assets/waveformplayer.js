@@ -70,8 +70,8 @@ var wavesurfer4 = WaveSurfer.create({
 //load audio file
 wavesurfer.load("./assets/audios/chilltrap.wav");
 wavesurfer2.load("./assets/audios/pop.wav");
-wavesurfer3.load("./assets/audios/hiphop.mp3");
-wavesurfer4.load("./assets/audios/cinematic.mp3");
+wavesurfer3.load("./assets/audios/hiphop.mp3",peaks);
+wavesurfer4.load("./assets/audios/cinematic.mp3",peaks);
 
 
 
