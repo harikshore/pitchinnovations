@@ -18,7 +18,7 @@ var wavesurfer = WaveSurfer.create({
     cursorWidth: 0,
     fillParent: true,
     hideScrollbar: true,
-    backend: 'MediaElement'
+    //backend: 'MediaElement'
 });
 
 var wavesurfer2 = WaveSurfer.create({
@@ -33,7 +33,7 @@ var wavesurfer2 = WaveSurfer.create({
     autoCenter: true,
     fillParent: true,
     hideScrollbar: true,
-    backend: 'MediaElement'
+    //backend: 'MediaElement'
 });
 
 var wavesurfer3 = WaveSurfer.create({
@@ -48,7 +48,7 @@ var wavesurfer3 = WaveSurfer.create({
     autoCenter: true,
     fillParent: true,
     hideScrollbar: true,
-    backend: 'MediaElement'
+    //backend: 'MediaElement'
 });
 
 var wavesurfer4 = WaveSurfer.create({
@@ -63,7 +63,7 @@ var wavesurfer4 = WaveSurfer.create({
     autoCenter: true,
     fillParent: true,
     hideScrollbar: true,
-    backend: 'MediaElement'
+    //backend: 'MediaElement'
 });
 
 
