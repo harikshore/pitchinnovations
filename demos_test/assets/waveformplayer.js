@@ -17,7 +17,7 @@ var wavesurfer = WaveSurfer.create({
     autoCenter: true,
     cursorWidth: 0,
     fillParent: true,
-    hideScrollbar: true,
+    hideScrollbar: true
     //backend: 'MediaElement'
 });
 
@@ -32,7 +32,7 @@ var wavesurfer2 = WaveSurfer.create({
     cursorWidth: 0,
     autoCenter: true,
     fillParent: true,
-    hideScrollbar: true,
+    hideScrollbar: true
     //backend: 'MediaElement'
 });
 
@@ -47,7 +47,7 @@ var wavesurfer3 = WaveSurfer.create({
     cursorWidth: 0,
     autoCenter: true,
     fillParent: true,
-    hideScrollbar: true,
+    hideScrollbar: true
     //backend: 'MediaElement'
 });
 
@@ -62,7 +62,7 @@ var wavesurfer4 = WaveSurfer.create({
     scrollParent: false,
     autoCenter: true,
     fillParent: true,
-    hideScrollbar: true,
+    hideScrollbar: true
     //backend: 'MediaElement'
 });
 
@@ -70,8 +70,8 @@ var wavesurfer4 = WaveSurfer.create({
 //load audio file
 wavesurfer.load("./assets/audios/chilltrap.wav");
 wavesurfer2.load("./assets/audios/pop.wav");
-wavesurfer3.load("./assets/audios/hiphop.mp3",peaks);
-wavesurfer4.load("./assets/audios/cinematic.mp3",peaks);
+wavesurfer3.load("./assets/audios/hiphop.mp3");
+wavesurfer4.load("./assets/audios/cinematic.mp3");
 
 
 
