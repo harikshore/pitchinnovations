@@ -979,7 +979,7 @@ body.is-instant:after {
 }
 
 #container19:not(:last-child) {
-	margin-bottom: 2rem !important;
+	margin-bottom: 0rem !important;
 }
 
 #container19 {
@@ -989,7 +989,7 @@ body.is-instant:after {
 	width: 100%;
 	align-items: flex-start;
 	justify-content: center;
-	background-color: #FFFFFF;
+	background-color: violet;
 }
 
 #container19 > .wrapper > .inner {
@@ -2693,7 +2693,7 @@ h1.style2 a:hover, h2.style2 a:hover, h3.style2 a:hover, p.style2 a:hover {
 	font-family: 'Inter', sans-serif;
 	font-size: 1em;
 	line-height: 1.5;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 #text67 a {
@@ -4467,7 +4467,7 @@ th {
 	}
 	
 	#container19:not(:last-child) {
-		margin-bottom: 1.5rem !important;
+		margin-bottom: 0rem !important;
 	}
 	
 	#container19 {
