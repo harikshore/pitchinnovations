@@ -142,6 +142,11 @@
 								transform: scale(1);
 							}
 
+							.fline {
+
+								margin: 10px;
+							}
+
 
 							.circle {
 
@@ -151,41 +156,42 @@
 								height: 50px;
 								line-height: 50px;
 								background: #B8B8B8;
-								color: white;
+								color: black;
 								font-family: 'Inter', sans-serif;
 								font-size: .625em;
+								font-weight: 600;
 								text-align: center;
 							}
 
 							.circle.isactivated {
 
-								background: #FBA742;
+								background: #FBA742B0;
 							}
 
 						</style>
 						<div class="inner" id="features-nav">
 							<div class="feature activated">
 								<a href="javascript:void(0)" class="feat-one" style="text-decoration:none;">
-									<p class="circle isactivated">01</p>
-									<p id="text58"><span>Bend from any chord to</span><br /><span>any chord</span></p>
-									<p id="text52">Fluid Chords allows you to bend from the simplest triad to the most
+									<p class="fline circle isactivated">01</p>
+									<p class="fline" id="text58"><span>Bend from any chord to</span><br /><span>any chord</span></p>
+									<p class="fline" id="text52">Fluid Chords allows you to bend from the simplest triad to the most
 										complex voicings - musically!</p>
 								</a>
 							</div>
 							<div class="feature">
 								<a href="javascript:void(0)" class="feat-two" style="text-decoration:none;">
-									<p class="circle">02</p>
-									<p id="text61"><span>Create Unique</span><br /><span>Pitch FX</span></p>
-									<p id="text59">Fluid Chords is a sound designer’s playground - You can now create
+									<p class="fline circle">02</p>
+									<p class="fline" id="text61"><span>Create Unique</span><br /><span>Pitch FX</span></p>
+									<p class="fline" id="text59">Fluid Chords is a sound designer’s playground - You can now create
 										unique pitch FX like chord risers and more</p>
 								</a>
 							</div>
 							<div class="feature">
 								<a href="javascript:void(0)" class="feat-three" style="text-decoration:none;">
-									<p class="circle">03</p>
-									<p id="text51"><span>Bend from a single note</span><br /><span>to a whole
+									<p class="fline circle">03</p>
+									<p class="fline" id="text51"><span>Bend from a single note</span><br /><span>to a whole
 											chord</span></p>
-									<p id="text62">Create harmonies that have never been heard before by bending from a
+									<p class="fline" id="text62">Create harmonies that have never been heard before by bending from a
 										single note to a whole chord</p>
 								</a>
 							</div>
@@ -302,7 +308,7 @@
 
 									.video-slider-1:hover {
 
-										transform: scale(1.2);
+										transform: scale(1.1);
 										transition: transform 1s ease, z-index 1s ease;
 
 									}
@@ -317,16 +323,16 @@
 								<div class="videos">
 									<div class="owl-one owl-carousel owl-theme video-slider-1">
 										<video playsinline="" muted="" autoplay="" loop="" style="width:100%;">
-											<source src="assets/videos/feature1.mp4" type="video/mp4">
-										</video>
-
-										<video playsinline="" muted="" autoplay="" loop="" style="width:100%;">
 											<source src="assets/videos/feature2.mp4" type="video/mp4">
-
 										</video>
 
 										<video playsinline="" muted="" autoplay="" loop="" style="width:100%;">
 											<source src="assets/videos/feature3.mp4" type="video/mp4">
+
+										</video>
+
+										<video playsinline="" muted="" autoplay="" loop="" style="width:100%;">
+											<source src="assets/videos/feature1.mp4" type="video/mp4">
 
 										</video>
 									</div>
