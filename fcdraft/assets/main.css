@@ -996,8 +996,8 @@ body.is-instant:after {
 }
 
 #container19 > .wrapper {
-	max-width: 70%;
-	width: 100%;
+	max-width: 100%;
+	width: 70%;
 }
 
 #container19.default > .wrapper > .inner > * {
@@ -4230,6 +4230,13 @@ th {
 	#container18.columns > .wrapper > .inner > div > .full:last-child {
 		margin-bottom: calc(var(--padding-vertical) * -1) !important;
 	}
+
+	#container19 > .wrapper {
+
+		max-width: 100;
+		width: 100%;
+
+	}
 	
 	#container07 {
 		--padding-horizontal: 2rem;
@@ -5441,6 +5448,13 @@ th {
 	
 	#container18 > .wrapper > .inner {
 		--spacing: 1rem;
+	}
+
+	#container19 > .wrapper {
+
+		max-width: 100;
+		width: 100%;
+
 	}
 	
 	#container07 > .wrapper > .inner {
