@@ -208,10 +208,13 @@
 								var btns = header.getElementsByClassName("feature");
 								for (var i = 0; i < btns.length; i++) {
 									btns[i].addEventListener("click", function () {
-										var current = document.getElementsByClassName("activated");
-										current[0].className = current[0].className.replace(" activated", "");
-										this.className += " activated";
-										$("this").find(".circle").addClass("isactivated");
+										var activatedFeature = $(".activated");
+										activatedFeature.find(".circle").removeClass("isactivated");
+										activatedFeature.removeClass("activated");
+										
+										var clickedElement = $(this);
+										clickedElement.addClass("activated");
+										clickedElement.find(".circle").addClass("isactivated");
 									});
 								}
 							</script>
