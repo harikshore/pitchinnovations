@@ -204,7 +204,7 @@ body.is-instant:after {
 
 #container01 {
 	--padding-horizontal: 3rem;
-	--padding-vertical: 0.5rem;
+	--padding-vertical: 0.875rem;
 	display: flex;
 	width: 100%;
 	align-items: center;
