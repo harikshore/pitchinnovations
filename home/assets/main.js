@@ -410,8 +410,444 @@
 		// Expose scrollToElement.
 			window._scrollToTop = scrollToTop;
 	
-	// Load elements (if needed).
-		loadElements(document.body);
+	// Sections.
+		(function() {
+	
+			var initialSection, initialScrollPoint, initialId,
+				header, footer, name, hideHeader, hideFooter, disableAutoScroll,
+				h, e, ee, k,
+				locked = false,
+				doNext = function() {
+	
+					var section;
+	
+					section = $('#main > .inner > section.active').nextElementSibling;
+	
+					if (!section || section.tagName != 'SECTION')
+						return;
+	
+					location.href = '#' + section.id.replace(/-section$/, '');
+	
+				},
+				doPrevious = function() {
+	
+					var section;
+	
+					section = $('#main > .inner > section.active').previousElementSibling;
+	
+					if (!section || section.tagName != 'SECTION')
+						return;
+	
+					location.href = '#' + (section.matches(':first-child') ? '' : section.id.replace(/-section$/, ''));
+	
+				},
+				doFirst = function() {
+	
+					var section;
+	
+					section = $('#main > .inner > section:first-of-type');
+	
+					if (!section || section.tagName != 'SECTION')
+						return;
+	
+					location.href = '#' + section.id.replace(/-section$/, '');
+	
+				},
+				doLast = function() {
+	
+					var section;
+	
+					section = $('#main > .inner > section:last-of-type');
+	
+					if (!section || section.tagName != 'SECTION')
+						return;
+	
+					location.href = '#' + section.id.replace(/-section$/, '');
+	
+				},
+				sections = {};
+	
+			// Expose doNext, doPrevious, doFirst, doLast.
+				window._next = doNext;
+				window._previous = doPrevious;
+				window._first = doFirst;
+				window._last = doLast;
+	
+			// Override exposed scrollToTop.
+				window._scrollToTop = function() {
+	
+					var section, id;
+	
+					// Scroll to top.
+						scrollToElement(null);
+	
+					// Section active?
+						if (!!(section = $('section.active'))) {
+	
+							// Get name.
+								id = section.id.replace(/-section$/, '');
+	
+								// Index section? Clear.
+									if (id == 'home')
+										id = '';
+	
+							// Reset hash to section name (via new state).
+								history.pushState(null, null, '#' + id);
+	
+						}
+	
+				};
+	
+			// Initialize.
+	
+				// Set scroll restoration to manual.
+					if ('scrollRestoration' in history)
+						history.scrollRestoration = 'manual';
+	
+				// Header, footer.
+					header = $('#header');
+					footer = $('#footer');
+	
+				// Show initial section.
+	
+					// Determine target.
+						h = thisHash();
+	
+						// Contains invalid characters? Might be a third-party hashbang, so ignore it.
+							if (h
+							&&	!h.match(/^[a-zA-Z0-9\-]+$/))
+								h = null;
+	
+						// Scroll point.
+							if (e = $('[data-scroll-id="' + h + '"]')) {
+	
+								initialScrollPoint = e;
+								initialSection = initialScrollPoint.parentElement;
+								initialId = initialSection.id;
+	
+							}
+	
+						// Section.
+							else if (e = $('#' + (h ? h : 'home') + '-section')) {
+	
+								initialScrollPoint = null;
+								initialSection = e;
+								initialId = initialSection.id;
+	
+							}
+	
+						// Missing initial section?
+							if (!initialSection) {
+	
+								// Default to index.
+									initialScrollPoint = null;
+									initialSection = $('#' + 'home' + '-section');
+									initialId = initialSection.id;
+	
+								// Clear index URL hash.
+									history.replaceState(undefined, undefined, '#');
+	
+							}
+	
+					// Get options.
+						name = (h ? h : 'home');
+						hideHeader = name ? ((name in sections) && ('hideHeader' in sections[name]) && sections[name].hideHeader) : false;
+						hideFooter = name ? ((name in sections) && ('hideFooter' in sections[name]) && sections[name].hideFooter) : false;
+						disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+	
+					// Deactivate all sections (except initial).
+	
+						// Initially hide header and/or footer (if necessary).
+	
+							// Header.
+								if (header && hideHeader) {
+	
+									header.classList.add('hidden');
+									header.style.display = 'none';
+	
+								}
+	
+							// Footer.
+								if (footer && hideFooter) {
+	
+									footer.classList.add('hidden');
+									footer.style.display = 'none';
+	
+								}
+	
+						// Deactivate.
+							ee = $$('#main > .inner > section:not([id="' + initialId + '"])');
+	
+							for (k = 0; k < ee.length; k++) {
+	
+								ee[k].className = 'inactive';
+								ee[k].style.display = 'none';
+	
+							}
+	
+					// Activate initial section.
+						initialSection.classList.add('active');
+	
+					// Load elements.
+						loadElements(initialSection);
+	
+						if (header)
+							loadElements(header);
+	
+						if (footer)
+							loadElements(footer);
+	
+					// Scroll to top (if not disabled for this section).
+						if (!disableAutoScroll)
+							scrollToElement(null, 'instant');
+	
+				// Load event.
+					on('load', function() {
+	
+						// Scroll to initial scroll point (if applicable).
+					 		if (initialScrollPoint)
+								scrollToElement(initialScrollPoint, 'instant');
+	
+					});
+	
+			// Hashchange event.
+				on('hashchange', function(event) {
+	
+					var section, scrollPoint, id, sectionHeight, currentSection, currentSectionHeight,
+						name, hideHeader, hideFooter, disableAutoScroll,
+						h, e, ee, k;
+	
+					// Lock.
+						if (locked)
+							return false;
+	
+					// Determine target.
+						h = thisHash();
+	
+						// Contains invalid characters? Might be a third-party hashbang, so ignore it.
+							if (h
+							&&	!h.match(/^[a-zA-Z0-9\-]+$/))
+								return false;
+	
+						// Scroll point.
+							if (e = $('[data-scroll-id="' + h + '"]')) {
+	
+								scrollPoint = e;
+								section = scrollPoint.parentElement;
+								id = section.id;
+	
+							}
+	
+						// Section.
+							else if (e = $('#' + (h ? h : 'home') + '-section')) {
+	
+								scrollPoint = null;
+								section = e;
+								id = section.id;
+	
+							}
+	
+						// Anything else.
+							else {
+	
+								// Default to index.
+									scrollPoint = null;
+									section = $('#' + 'home' + '-section');
+									id = section.id;
+	
+								// Clear index URL hash.
+									history.replaceState(undefined, undefined, '#');
+	
+							}
+	
+					// No section? Bail.
+						if (!section)
+							return false;
+	
+					// Section already active?
+						if (!section.classList.contains('inactive')) {
+	
+							// Get options.
+								name = (section ? section.id.replace(/-section$/, '') : null);
+								disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+	
+						 	// Scroll to scroll point (if applicable).
+						 		if (scrollPoint)
+									scrollToElement(scrollPoint);
+	
+							// Otherwise, just scroll to top (if not disabled for this section).
+								else if (!disableAutoScroll)
+									scrollToElement(null);
+	
+							// Bail.
+								return false;
+	
+						}
+	
+					// Otherwise, activate it.
+						else {
+	
+							// Lock.
+								locked = true;
+	
+							// Clear index URL hash.
+								if (location.hash == '#home')
+									history.replaceState(null, null, '#');
+	
+							// Get options.
+								name = (section ? section.id.replace(/-section$/, '') : null);
+								hideHeader = name ? ((name in sections) && ('hideHeader' in sections[name]) && sections[name].hideHeader) : false;
+								hideFooter = name ? ((name in sections) && ('hideFooter' in sections[name]) && sections[name].hideFooter) : false;
+								disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+	
+							// Deactivate current section.
+	
+								// Hide header and/or footer (if necessary).
+	
+									// Header.
+										if (header && hideHeader) {
+	
+											header.classList.add('hidden');
+											header.style.display = 'none';
+	
+										}
+	
+									// Footer.
+										if (footer && hideFooter) {
+	
+											footer.classList.add('hidden');
+											footer.style.display = 'none';
+	
+										}
+	
+								// Deactivate.
+									currentSection = $('#main > .inner > section:not(.inactive)');
+									currentSection.classList.add('inactive');
+									currentSection.classList.remove('active');
+									currentSection.style.display = 'none';
+	
+								// Unload elements.
+									unloadElements(currentSection);
+	
+							// Activate target section.
+	
+								// Show header and/or footer (if necessary).
+	
+									// Header.
+										if (header && !hideHeader) {
+	
+											header.style.display = '';
+											header.classList.remove('hidden');
+	
+										}
+	
+									// Footer.
+										if (footer && !hideFooter) {
+	
+											footer.style.display = '';
+											footer.classList.remove('hidden');
+	
+										}
+	
+								// Activate.
+									section.classList.remove('inactive');
+									section.classList.add('active');
+									section.style.display = '';
+	
+							// Trigger 'resize' event.
+								trigger('resize');
+	
+							// Load elements.
+								loadElements(section);
+	
+							// Scroll to scroll point (if applicable).
+								if (scrollPoint)
+									scrollToElement(scrollPoint, 'instant');
+	
+							// Otherwise, just scroll to top (if not disabled for this section).
+								else if (!disableAutoScroll)
+									scrollToElement(null, 'instant');
+	
+							// Unlock.
+								locked = false;
+	
+						}
+	
+					return false;
+	
+				});
+	
+				// Hack: Allow hashchange to trigger on click even if the target's href matches the current hash.
+					on('click', function(event) {
+	
+						var t = event.target,
+							tagName = t.tagName.toUpperCase(),
+							scrollPoint;
+	
+						// Find real target.
+							switch (tagName) {
+	
+								case 'IMG':
+								case 'SVG':
+								case 'USE':
+								case 'U':
+								case 'STRONG':
+								case 'EM':
+								case 'CODE':
+								case 'S':
+								case 'MARK':
+								case 'SPAN':
+	
+									// Find ancestor anchor tag.
+										while ( !!(t = t.parentElement) )
+											if (t.tagName == 'A')
+												break;
+	
+									// Not found? Bail.
+										if (!t)
+											return;
+	
+									break;
+	
+								default:
+									break;
+	
+							}
+	
+						// Target is an anchor *and* its href is a hash?
+							if (t.tagName == 'A'
+							&&	t.getAttribute('href').substr(0, 1) == '#') {
+	
+								// Hash matches an invisible scroll point?
+									if (!!(scrollPoint = $('[data-scroll-id="' + t.hash.substr(1) + '"][data-scroll-invisible="1"]'))) {
+	
+										// Prevent default.
+											event.preventDefault();
+	
+										// Scroll to element.
+											scrollToElement(scrollPoint);
+	
+									}
+	
+								// Hash matches the current hash?
+									else if (t.hash == window.location.hash) {
+	
+										// Prevent default.
+											event.preventDefault();
+	
+										// Replace state with '#'.
+											history.replaceState(undefined, undefined, '#');
+	
+										// Replace location with target hash.
+											location.replace(t.hash);
+	
+									}
+	
+							}
+	
+					});
+	
+		})();
 	
 	// Browser hacks.
 	
@@ -1028,6 +1464,10 @@
 					NodeList.prototype.forEach = Array.prototype.forEach;
 	
 			// Handlers.
+	
+				/**
+				 * "On Load" handler.
+				 */
 				loadHandler = function() {
 	
 					var i = this,
@@ -1060,6 +1500,9 @@
 	
 				};
 	
+				/**
+				 * "On Enter" handler.
+				 */
 				enterHandler = function() {
 	
 					var	i = this,
