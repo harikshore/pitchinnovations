@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Pitch Innovations - Fluid Chords (copy)</title>
+	<title>Pitch Innovations - Fluid Chords</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 	<meta name="description"
@@ -12,6 +12,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:description"
 		content="Elevating expressions Pitch Innovations is the first music software company from Bollywood. We aim to deliver innovative tools that improve how we express music, push musicianship on stage and in the studio, and unlock new possibilities to take sound to a new frontier. Founded by Krishna Chetan." />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link
 		href="https://fonts.googleapis.com/css?family=Inter:300,300italic,500,500italic,800,800italic,700,700italic,600,600italic,400,400italic,200,200italic,900,900italic"
 		rel="stylesheet" type="text/css" />
@@ -23,6 +24,17 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
 		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="assets/mp/magnific-popup.css" />
+
+	<style>
+		.mfp-iframe-holder .mfp-content {
+			
+			width: 60em;
+			height: 30em;
+			max-height: 90vh;
+			max-width: 90vw;
+		}
+	</style>
 </head>
 
 <body>
@@ -104,7 +116,9 @@
 							<h2 id="text11">The Future of Chord Bending is here</h2>
 							<ul id="buttons01" class="buttons">
 								<li>
-									<a href="https://domain.ext/path" class="button n01">Watch Trailer</a>
+									<a href="https://www.youtube.com/watch?v=MUTITIiSCiU"
+										class="button n01 mpopup">Watch Trailer</a>
+
 								</li>
 							</ul>
 						</div>
@@ -433,9 +447,6 @@
 						<div class="inner">
 							<h2 id="text07">Artists using Fluid Chords</h2>
 							<div id="embed03">
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-									integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-									crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 								<script
 									src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
 									integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
@@ -875,6 +886,45 @@
 		</div>
 	</div>
 	<script src="assets/main.js"></script>
+	<script src="assets/mp/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".mpopup").magnificPopup({
+				type: 'iframe',
+				iframe: {
+					markup: '<div class="mfp-iframe-scaler">' +
+						'<div class="mfp-close"></div>' +
+						'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+						'</div>',
+
+					patterns: {
+						youtube: {
+							index: 'youtube.com/',
+
+							id: 'v=',
+
+							src: 'https://www.youtube.com/embed/%id%?autoplay=1&controls=0'
+						},
+						vimeo: {
+							index: 'vimeo.com/',
+							id: '/',
+							src: '//player.vimeo.com/video/%id%?autoplay=1&controls=0'
+						},
+						gmaps: {
+							index: '//maps.google.',
+							src: '%id%&output=embed'
+						}
+
+
+
+					},
+
+					srcAction: 'iframe_src',
+				}
+			});
+
+		})
+	</script>
 </body>
 
 </html>
