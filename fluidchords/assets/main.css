@@ -373,7 +373,7 @@ body.is-instant:after {
 	align-items: center;
 	justify-content: center;
 	background-attachment: scroll;
-	background-image: url('images/container18.png');
+	background-image: linear-gradient(180deg, #DEDEDE 0%, #FFF8F8 51.26%, #C5C5C5 100%);
 	background-position: center;
 	background-repeat: repeat;
 	background-size: cover;
