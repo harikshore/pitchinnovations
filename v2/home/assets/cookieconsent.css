@@ -1,0 +1,70 @@
+.cookie-container,p{
+
+    margin: 24px 0;
+    line-height: 1.5;
+    font-size: .75em;
+    font-family: "Inter";
+}
+
+
+.cookie-container .wrapper {
+    
+   padding: .125em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cookie-container > .wrapper > *:first-child {
+
+    width: 90%;
+    padding-right: .5em;
+}
+
+.cookie-container > .wrapper > *:last-child {
+
+    align: center;
+    position: relative;
+}
+
+.cookie-container {
+
+    
+    position: fixed;
+    bottom: -100;
+    left: 0;
+    right: 0;
+    z-index: 600;
+    background: #eee;
+    color: #111;
+    margin: 0;
+    padding: 0 10px;
+
+}
+
+.cookie-container.active {
+
+    bottom: 0;
+}
+
+.cookie-container a {
+
+    color: #111;
+}
+
+.cookie-btn {
+    display: block;
+    position: relative;
+    background: #eee;
+    border: 1px solid #111;
+    color: #111;
+    padding: .5em 1em;
+    font-size: .75em;
+    margin-bottom: 8px;
+    letter-spacing: .05em;
+    cursor: pointer;
+    box-align: center;
+    font-family: "Inter";
+}
