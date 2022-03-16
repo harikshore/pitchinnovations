@@ -4277,15 +4277,15 @@ form .actions button:disabled {
 
 @media (max-width: 736px){
 
-	#buttons09 .button {
-		color: #FFFFFF;
-		border: solid 5px #FFFFFF;
+	#buttons09 .n01 {
+		border: solid 3px #FFFFFF;
 	}
 }
 
+/*
 #buttons09 .n01 {
 	border: solid 5px #FFFFFF;
-}
+} */
 
 #buttons03 .n01 {
 	border: solid 1px #1668D7;
