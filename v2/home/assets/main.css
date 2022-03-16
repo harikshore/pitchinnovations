@@ -4275,6 +4275,14 @@ form .actions button:disabled {
 	border: solid 5px #FFFFFF;
 }
 
+@media (max-width: 736px){
+
+	#buttons09 .button {
+		color: #FFFFFF;
+		border: solid 5px #FFFFFF;
+	}
+}
+
 #buttons09 .n01 {
 	border: solid 5px #FFFFFF;
 }
