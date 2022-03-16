@@ -3582,6 +3582,14 @@ form .actions button:disabled {
 	border: solid 5px #FFFFFF;
 }
 
+@media (max-width: 736px)
+{
+#buttons01 .button {
+	color: #FFFFFF;
+	border: solid 3px #FFFFFF;
+}
+}
+
 #buttons03 {
 	gap: 1rem;
 	flex-direction: row;

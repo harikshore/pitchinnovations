@@ -520,7 +520,8 @@ body.is-instant:after {
 	display: flex;
 	width: 100%;
 	min-height: var(--viewport-height);
-	align-items: flex-start;
+	/* align-items: flex-start; */
+	align-items: center;
 	justify-content: center;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -3579,6 +3580,14 @@ form .actions button:disabled {
 #buttons01 .button {
 	color: #FFFFFF;
 	border: solid 5px #FFFFFF;
+}
+
+@media (max-width: 736px)
+{
+#buttons01 .button {
+	color: #FFFFFF;
+	border: solid 3px #FFFFFF;
+}
 }
 
 #buttons03 {
