@@ -3644,12 +3644,18 @@ hr:before {
 }
 
 #links01 {
-	gap: 1.5rem;
+	/*gap: 1.5rem; */
 	flex-direction: row;
 	flex-wrap: wrap;
 	font-family: 'Inter', sans-serif;
 	font-size: 0.75em;
 	font-weight: 400;
+}
+
+#links01 * {
+
+	margin-right: 1rem;
+
 }
 
 #links01:not(:first-child) {
