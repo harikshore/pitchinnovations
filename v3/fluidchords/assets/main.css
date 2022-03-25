@@ -1565,7 +1565,7 @@ body.is-instant:after {
 }
 
 #container03:not(:first-child) {
-	margin-top: 4rem !important;
+	margin-top: 2rem !important;
 }
 
 #container03:not(:last-child) {
@@ -4765,7 +4765,7 @@ th {
 	}
 	
 	#container03:not(:first-child) {
-		margin-top: 2.625rem !important;
+		margin-top: 2rem !important;
 	}
 	
 	#container03:not(:last-child) {
