@@ -3701,6 +3701,10 @@ form .actions button:disabled {
 	background-color: #1668D7;
 }
 
+#buttons05 .width {
+	width: 10rem;
+}
+
 #buttons05 .n01:hover {
 	background-color: #004FBA !important;
 }
