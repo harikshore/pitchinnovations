@@ -4661,8 +4661,8 @@ form .actions button:disabled {
 
 .buttons.style2 li a {
 	display: flex;
-	width: 7rem;
-	height: 2.5rem;
+	width: 10rem;
+	height: 3rem;
 	line-height: 2.5rem;
 	padding: 0 1.25rem;
 	vertical-align: middle;
@@ -6433,7 +6433,7 @@ form .actions button:disabled {
 	}
 	
 	.buttons.style2 li a {
-		width: 8rem;
+		width: 10rem;
 	}
 }
 
