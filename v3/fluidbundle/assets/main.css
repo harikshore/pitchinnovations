@@ -743,7 +743,7 @@ body.is-instant:after {
 }
 
 #container18 > .wrapper > .inner {
-	--gutters: 0rem;
+	--gutters: 5rem;
 	--padding-horizontal: 6rem;
 	--padding-vertical: 2rem;
 	--spacing: 1.5rem;
@@ -883,7 +883,7 @@ body.is-instant:after {
 }
 
 #container17 > .wrapper > .inner {
-	--gutters: 0rem;
+	--gutters: 5rem;
 	--padding-horizontal: 6rem;
 	--padding-vertical: 2rem;
 	--spacing: 1.5rem;
