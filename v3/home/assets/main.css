@@ -3290,6 +3290,12 @@ h1.style3 a:hover, h2.style3 a:hover, h3.style3 a:hover, p.style3 a:hover {
 	padding: .1em;
 }
 
+.gradient-text {
+	-webkit-box-decoration-break: clone;	
+	box-decoration-break: clone;
+	position: inline;
+}
+
 #text16 br + br {
 	margin-top: 0.6rem;
 }
