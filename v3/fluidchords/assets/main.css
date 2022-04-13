@@ -2215,11 +2215,16 @@ h1.style2 a:hover, h2.style2 a:hover, h3.style2 a:hover, p.style2 a:hover {
 }
 
 #text43 {
-	background-image: -webkit-linear-gradient(#9E9E9E,#323232);
+	background: -webkit-linear-gradient(#9E9E9E,#323232);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	background-clip: text;
 	padding: .1em;
+}
+
+.gradient-text {
+	-webkit-box-decoration-break: clone;	
+	box-decoration-break: clone;
+	position: inline;
 }
 
 #text11 br + br {
