@@ -1299,12 +1299,17 @@ hr:before {
 }
 
 #links01 {
-	gap: 1.5rem;
+	/* gap: 1.5rem; */
 	flex-direction: row;
 	flex-wrap: wrap;
 	font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-size: 0.75em;
 	font-weight: 400;
+}
+
+#links01 * {
+
+	margin-right: 0.75rem;
 }
 
 #links01:not(:first-child) {
