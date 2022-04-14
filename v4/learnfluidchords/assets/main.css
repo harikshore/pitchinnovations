@@ -343,13 +343,13 @@ body.is-instant:after {
 }
 
 #container01 > .wrapper > .inner > :nth-child(1) {
-	width: 20%;
+	width: 13%;
 	--alignment: left;
 	--flex-alignment: flex-start;
 }
 
 #container01 > .wrapper > .inner > :nth-child(2) {
-	width: 25%;
+	width: 32%;
 	--alignment: left;
 	--flex-alignment: flex-start;
 }
@@ -1837,19 +1837,19 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(1) {
-		width: 20%;
+		width: 13%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 25%;
+		width: 27%;
 		--alignment: left;
 		--flex-alignment: flex-start;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 55%;
+		width: 60%;
 		--alignment: right;
 		--flex-alignment: flex-end;
 	}
@@ -2208,15 +2208,15 @@ form .actions button:disabled {
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(1) {
-		width: 20%;
+		width: 13%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(2) {
-		width: 25%;
+		width: 27%;
 	}
 	
 	#container01 > .wrapper > .inner > :nth-child(3) {
-		width: 55%;
+		width: 60%;
 	}
 	
 	#container05 > .wrapper > .inner {
