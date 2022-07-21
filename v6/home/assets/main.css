@@ -2911,7 +2911,7 @@ body.is-instant:after {
 }
 
 #image11:not(:first-child) {
-	margin-top: -3rem !important;
+	margin-top: -2.5rem !important;
 }
 
 #image11:not(:last-child) {
