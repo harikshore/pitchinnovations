@@ -2659,8 +2659,9 @@ body.is-touch #container07 {
 }
 
 #image03 .frame {
-	width: 55rem;
+	width: 70rem;
 	transition: none;
+	margin-top: -8rem;
 }
 
 #image03 .frame img {
@@ -5587,7 +5588,8 @@ th {
 	}
 	
 	#image03 .frame {
-		width: 55rem;
+		width: 70rem;
+		margin-top: -2rem;
 	}
 	
 	#image13 .frame {
