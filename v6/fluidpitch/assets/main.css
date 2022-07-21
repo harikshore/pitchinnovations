@@ -4185,6 +4185,10 @@ form .actions button:disabled {
 	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
+#buttons02 .width {
+	width: 9rem !important;
+}
+
 #buttons02 .button {
 	background-color: #000000;
 	color: #FFFFFF;
