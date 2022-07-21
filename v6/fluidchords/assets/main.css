@@ -2695,15 +2695,15 @@ body.is-instant:after {
 }
 
 #image04:not(:first-child) {
-	margin-top: 1.5rem !important;
+	margin-top: -11rem !important;
 }
 
 #image04:not(:last-child) {
-	margin-bottom: 1.5rem !important;
+	margin-bottom: 1rem !important;
 }
 
 #image04 .frame {
-	width: 50rem;
+	width: 70rem;
 	transition: none;
 }
 
@@ -5880,11 +5880,11 @@ th {
 	}
 	
 	#image04:not(:first-child) {
-		margin-top: 1.125rem !important;
+		margin-top: -3rem !important;
 	}
 	
 	#image04:not(:last-child) {
-		margin-bottom: 1.125rem !important;
+		margin-bottom: 1rem !important;
 	}
 	
 	#image04 .frame {
