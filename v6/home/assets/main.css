@@ -2893,7 +2893,7 @@ body.is-instant:after {
 }
 
 #image10:not(:first-child) {
-	margin-top: -3rem !important;
+	margin-top: 1.5rem !important;
 }
 
 #image10:not(:last-child) {
@@ -2901,7 +2901,7 @@ body.is-instant:after {
 }
 
 #image10 .frame {
-	width: 35rem;
+	width: 32rem;
 	transition: transform 0.25s ease, z-index 0.25s ease;
 }
 
@@ -2911,7 +2911,7 @@ body.is-instant:after {
 }
 
 #image11:not(:first-child) {
-	margin-top: -2.5rem !important;
+	margin-top: 1.5rem !important;
 }
 
 #image11:not(:last-child) {
@@ -2919,7 +2919,7 @@ body.is-instant:after {
 }
 
 #image11 .frame {
-	width: 34rem;
+	width: 32rem;
 	transition: transform 0.25s ease, z-index 0.25s ease;
 }
 
@@ -3265,6 +3265,24 @@ h1.style3 a:hover, h2.style3 a:hover, h3.style3 a:hover, p.style3 a:hover {
 	margin-top: 0.6rem;
 }
 
+.gradient-text {
+	background: -webkit-linear-gradient(#9E9E9E,#323232);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;	
+	box-decoration-break: clone;
+	position: inline;
+}
+
+.gradient-text2 {
+	background: -webkit-linear-gradient(right,#8e33f2,#E19F51,#d08a72);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;	
+	box-decoration-break: clone;
+	position: inline;
+}
+
 #text14 {
 	text-align: center;
 	color: #2A2A2A;
@@ -3284,22 +3302,13 @@ h1.style3 a:hover, h2.style3 a:hover, h3.style3 a:hover, p.style3 a:hover {
 }
 
 #text14 {
+	background: -webkit-linear-gradient(#9E9E9E,#323232);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	padding: .1em;
 }
 
 .gradient-text {
-	background: -webkit-linear-gradient(#9E9E9E,#323232);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-box-decoration-break: clone;	
-	box-decoration-break: clone;
-	position: inline;
-}
-
-.gradient-text2 {
-	background: -webkit-linear-gradient(right,#8e33f2,#E19F51,#d08a72);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	-webkit-box-decoration-break: clone;	
 	box-decoration-break: clone;
 	position: inline;
@@ -5805,7 +5814,7 @@ form .actions button:disabled {
 	}
 	
 	#image10:not(:first-child) {
-		margin-top: 1rem !important;
+		margin-top: 1.125rem !important;
 	}
 	
 	#image10:not(:last-child) {
@@ -5817,7 +5826,7 @@ form .actions button:disabled {
 	}
 	
 	#image11:not(:first-child) {
-		margin-top: 1rem !important;
+		margin-top: 1.125rem !important;
 	}
 	
 	#image11:not(:last-child) {
@@ -5825,7 +5834,7 @@ form .actions button:disabled {
 	}
 	
 	#image11 .frame {
-		width: 34rem;
+		width: 32rem;
 	}
 	
 	#image21 .frame {
