@@ -2893,7 +2893,7 @@ body.is-instant:after {
 }
 
 #image10:not(:first-child) {
-	margin-top: 1.5rem !important;
+	margin-top: -3rem !important;
 }
 
 #image10:not(:last-child) {
@@ -2911,7 +2911,7 @@ body.is-instant:after {
 }
 
 #image11:not(:first-child) {
-	margin-top: 1.5rem !important;
+	margin-top: -3rem !important;
 }
 
 #image11:not(:last-child) {
@@ -5805,7 +5805,7 @@ form .actions button:disabled {
 	}
 	
 	#image10:not(:first-child) {
-		margin-top: 1.125rem !important;
+		margin-top: 1rem !important;
 	}
 	
 	#image10:not(:last-child) {
@@ -5817,7 +5817,7 @@ form .actions button:disabled {
 	}
 	
 	#image11:not(:first-child) {
-		margin-top: 1.125rem !important;
+		margin-top: 1rem !important;
 	}
 	
 	#image11:not(:last-child) {
